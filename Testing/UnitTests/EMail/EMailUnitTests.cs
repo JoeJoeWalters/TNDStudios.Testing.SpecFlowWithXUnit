@@ -42,7 +42,7 @@ namespace Testing.UnitTests.EMail
         /// </summary>
         /// <param name="email">The email to check</param>
         [Theory]
-        [InlineData("joe.walters@impellam.com")]
+        [InlineData("joewalters999@gmail.com")]
         public void Is_Email_Valid(String email)
             => Assert.True(
                 (new EMailChecker()).Valid(email)
@@ -53,7 +53,7 @@ namespace Testing.UnitTests.EMail
         /// </summary>
         /// <param name="email">The email to check</param>
         [Theory]
-        [InlineData("joe.walters~impellam.com")]
+        [InlineData("joewalters999~gmail.com")]
         public void Is_Email_InValid(String email)
             => Assert.False(
                 (new EMailChecker()).Valid(email)
